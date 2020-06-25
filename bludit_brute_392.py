@@ -13,6 +13,7 @@ group.add_argument("-u", help="username to use")
 group.add_argument("-uf", help="file with usernames")
 parser.add_argument("-w", "--wordlist", help="wordlist to use")
 parser.add_argument("-v", action="store_true", help="more output")
+users = []
 
 args = parser.parse_args()
 
@@ -23,7 +24,7 @@ if args.uf:
         u = [x.strip() for x in l]
     users = u
 else:
-    users = args.u
+    users.append(args.u)
     
 wordlist = args.wordlist
 host = args.host
