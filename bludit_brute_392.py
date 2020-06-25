@@ -64,7 +64,7 @@ for user in users:
             if '/admin/dashboard' in login_result.headers['location']:
                 print()
                 print('SUCCESS: Password found!')
-                print('Use {u}:{p} to login.'.format(u = username, p = password))
+                print('Use {u}:{p} to login.'.format(u = user, p = password))
                 print()
                 #pass found no need to go further
                 break
